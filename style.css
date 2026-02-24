@@ -254,11 +254,9 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
   .mobile-controls { display: flex; }
   .mobile-menu { /* Keep other styles for .mobile-menu here if any */ }
   .mobile-menu.open { display: flex; }
-  .header .logo-name,
   .header .logo-phone { display: none; }
 }
 @media (min-width: 640px) {
-  .header .logo-name,
   .header .logo-phone { display: flex; }
 }
 
