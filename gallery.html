@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — Dipped &amp; Darling Sweet Treats</title>
+  <meta name="description" content="Browse our full gallery of handcrafted hand dipped delites — strawberries, cakesicles, treat boxes, holiday treats, pretzels, and more.">
+  <meta name="theme-color" content="#6B3E3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="stylesheet" href="style.css?v=1707960000">
+  <style>
+    .gallery-page-hero {
+      padding: 7rem 0 2.5rem;
+      text-align: center;
+      background: linear-gradient(135deg, #fdf6f0 0%, #fce8f0 100%);
+    }
+    .gallery-page-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: #3d1a1a;
+      margin-bottom: 0.75rem;
+    }
+    .gallery-page-hero p {
+      color: #7a4a4a;
+      font-size: 1.1rem;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+    .gallery-full-page {
+      padding: 3rem 0 5rem;
+    }
+    .gallery-full-page .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    .gallery-category {
+      margin-bottom: 4rem;
+    }
+    .gallery-category-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.75rem;
+      color: #3d1a1a;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #f0c8d8;
+    }
+    .gallery-grid-full {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="siteHeader">
+    <nav class="container">
+      <div class="nav-inner">
+        <a href="index.html#home" class="logo">
+          <img src="images/logo.jpg" alt="Dipped &amp; Darling Sweet Treats Logo">
+          <div class="logo-text">
+            <span class="logo-name">Dipped &amp; Darling</span>
+          </div>
+        </a>
+
+        <div class="desktop-nav">
+          <a href="index.html#home">Home</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="index.html#menu">Menu</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#contact">Contact</a>
+          <a href="tel:9405978453" class="cta-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call Us
+          </a>
+        </div>
+
+        <div class="mobile-controls">
+          <a href="tel:9405978453" aria-label="Call us">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </a>
+          <button onclick="toggleMobileMenu()" aria-label="Toggle mobile menu" id="menuBtn">
+            <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            <svg id="closeIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html#home" onclick="closeMobileMenu()">Home</a>
+        <a href="gallery.html" onclick="closeMobileMenu()">Gallery</a>
+        <a href="index.html#menu" onclick="closeMobileMenu()">Menu</a>
+        <a href="index.html#about" onclick="closeMobileMenu()">About</a>
+        <a href="index.html#contact" onclick="closeMobileMenu()">Contact</a>
+        <div class="contact-divider">
+          <p>Contact Us</p>
+          <a href="tel:9405978453">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            (940) 597-8453
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== GALLERY PAGE HERO ===== -->
+  <div class="gallery-page-hero">
+    <h1>Our Full Gallery</h1>
+    <p>Browse all of our handcrafted hand dipped delites</p>
+  </div>
+
+  <!-- ===== FULL GALLERY ===== -->
+  <section class="gallery-full-page">
+    <div class="container" id="fullGallery">
+      <!-- Rendered by inline script below -->
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-row">
+            <img src="images/logo.jpg" alt="Dipped &amp; Darling Sweet Treats Logo">
+            <span>Dipped &amp; Darling</span>
+          </div>
+          <p>Handcrafted sweet treats made with love in North Texas</p>
+          <div class="certified">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+            <span>Texas Food Handler Certified</span>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <span>Quick Links</span>
+          <nav>
+            <a href="index.html#home">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#contact">Contact</a>
+          </nav>
+        </div>
+
+        <div class="footer-connect">
+          <span>Connect With Us</span>
+          <div class="connect-links">
+            <a href="tel:9405978453">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              (940) 597-8453
+            </a>
+            <a href="mailto:dippedndarling@gmail.com">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              dippedndarling@gmail.com
+            </a>
+            <p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              Serving North Texas
+            </p>
+          </div>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/profile.php?id=61581837754431" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/dippedanddarling" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </a>
+            <a href="https://www.facebook.com/messages/t/61581837754431/" target="_blank" rel="noopener noreferrer" aria-label="Facebook Messenger">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> Dipped &amp; Darling Sweet Treats. All rights reserved.</p>
+        <p>Made with <svg style="display:inline-block;vertical-align:middle" class="heart" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg> in Texas</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== LIGHTBOX ===== -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    </button>
+    <button class="lightbox-nav prev" id="lightboxPrev" aria-label="Previous image">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+    </button>
+    <div class="lightbox-content">
+      <img id="lightboxImg" src="" alt="">
+      <div class="lightbox-caption">
+        <h3 id="lightboxTitle"></h3>
+        <p id="lightboxDesc"></p>
+      </div>
+    </div>
+    <button class="lightbox-nav next" id="lightboxNext" aria-label="Next image">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+    </button>
+  </div>
+
+  <!-- gallery.js provides galleryImages array -->
+  <script src="gallery.js" defer></script>
+  <script>
+    // Runs after gallery.js has loaded
+    document.addEventListener('DOMContentLoaded', function() {
+
+      var categories = [
+        { id: 'strawberries',  label: 'Strawberries' },
+        { id: 'valentines',    label: "Valentine's Day" },
+        { id: 'treat-boxes',   label: 'Treat Boxes &amp; Party Boxes' },
+        { id: 'holiday',       label: 'Holiday &amp; Seasonal' },
+        { id: 'pretzels-oreos', label: 'Pretzels, Oreos &amp; Other Treats' }
+      ];
+
+      var container = document.getElementById('fullGallery');
+
+      // All gallery images shown on this page (for lightbox nav)
+      var pageImages = galleryImages.slice();
+
+      categories.forEach(function(cat) {
+        var items = pageImages.filter(function(img) { return img.section === cat.id; });
+        if (items.length === 0) return;
+
+        var section = document.createElement('div');
+        section.className = 'gallery-category';
+
+        var heading = document.createElement('h2');
+        heading.className = 'gallery-category-title';
+        heading.innerHTML = cat.label;
+        section.appendChild(heading);
+
+        var grid = document.createElement('div');
+        grid.className = 'gallery-grid-full';
+
+        items.forEach(function(item) {
+          var idx = pageImages.indexOf(item);
+          var card = document.createElement('div');
+          card.className = 'treat-card';
+          card.dataset.index = idx;
+
+          var wrapper = document.createElement('div');
+          wrapper.className = 'img-wrapper';
+          var img = document.createElement('img');
+          img.src = item.src;
+          img.alt = item.title;
+          img.loading = 'lazy';
+          wrapper.appendChild(img);
+
+          var overlay = document.createElement('div');
+          overlay.className = 'card-overlay';
+          overlay.innerHTML = '<h3>' + item.title + '</h3><p>' + item.desc + '</p>';
+
+          card.appendChild(wrapper);
+          card.appendChild(overlay);
+          card.addEventListener('click', function() {
+            openLightbox(parseInt(this.dataset.index));
+          });
+          grid.appendChild(card);
+        });
+
+        section.appendChild(grid);
+        container.appendChild(section);
+      });
+
+      // === Lightbox ===
+      var lightboxIndex = 0;
+      var lightbox = document.getElementById('lightbox');
+      var lightboxImg = document.getElementById('lightboxImg');
+      var lightboxTitle = document.getElementById('lightboxTitle');
+      var lightboxDesc = document.getElementById('lightboxDesc');
+      var lightboxContent = document.querySelector('.lightbox-content');
+
+      window.openLightbox = function(index) {
+        lightboxIndex = index;
+        updateLightbox();
+        lightbox.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      };
+
+      function closeLightbox() {
+        lightbox.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+
+      function updateLightbox(direction) {
+        var item = pageImages[lightboxIndex];
+        lightboxImg.src = item.src;
+        lightboxImg.alt = item.title;
+        lightboxTitle.textContent = item.title;
+        lightboxDesc.textContent = item.desc;
+        if (direction) {
+          lightboxContent.classList.remove('slide-left', 'slide-right');
+          void lightboxContent.offsetWidth;
+          lightboxContent.classList.add(direction === 'prev' ? 'slide-left' : 'slide-right');
+        }
+      }
+
+      document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+      lightbox.addEventListener('click', function(e) {
+        if (e.target === lightbox) closeLightbox();
+      });
+      document.getElementById('lightboxPrev').addEventListener('click', function() {
+        lightboxIndex = (lightboxIndex - 1 + pageImages.length) % pageImages.length;
+        updateLightbox('prev');
+      });
+      document.getElementById('lightboxNext').addEventListener('click', function() {
+        lightboxIndex = (lightboxIndex + 1) % pageImages.length;
+        updateLightbox('next');
+      });
+      document.addEventListener('keydown', function(e) {
+        if (!lightbox.classList.contains('open')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') {
+          lightboxIndex = (lightboxIndex - 1 + pageImages.length) % pageImages.length;
+          updateLightbox('prev');
+        }
+        if (e.key === 'ArrowRight') {
+          lightboxIndex = (lightboxIndex + 1) % pageImages.length;
+          updateLightbox('next');
+        }
+      });
+
+      // === Header scroll ===
+      window.addEventListener('scroll', function() {
+        var header = document.getElementById('siteHeader');
+        if (window.scrollY > 20) header.classList.add('scrolled');
+        else header.classList.remove('scrolled');
+      });
+
+      // === Mobile menu ===
+      window.toggleMobileMenu = function() {
+        var menu = document.getElementById('mobileMenu');
+        var menuIcon = document.getElementById('menuIcon');
+        var closeIcon = document.getElementById('closeIcon');
+        var isOpen = menu.classList.toggle('open');
+        menuIcon.style.display = isOpen ? 'none' : 'block';
+        closeIcon.style.display = isOpen ? 'block' : 'none';
+      };
+      window.closeMobileMenu = function() {
+        var menu = document.getElementById('mobileMenu');
+        var menuIcon = document.getElementById('menuIcon');
+        var closeIcon = document.getElementById('closeIcon');
+        menu.classList.remove('open');
+        menuIcon.style.display = 'block';
+        closeIcon.style.display = 'none';
+      };
+
+    });
+  </script>
+</body>
+</html>
