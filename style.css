@@ -213,14 +213,14 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
   transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
 }
 .mobile-menu.open {
-  max-height: 400px;
+  max-height: 80vh; /* Adjusted from 400px to a percentage of viewport height */
   opacity: 1;
-  padding: 1rem 0 1.5rem;
+  padding: 0.75rem 0 1rem; /* Reduced vertical padding */
 }
 .mobile-menu a {
   color: #6B3E3E;
   font-weight: 500;
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 1rem; /* Reduced vertical padding */
   border-radius: 0.5rem;
   transition: all 0.4s cubic-bezier(0.22, 1.8, 0.36, 1);
 }
@@ -230,8 +230,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 }
 .mobile-menu .contact-divider {
   border-top: 1px solid rgba(253,204,210,0.3);
-  padding-top: 1rem;
-  margin-top: 0.5rem;
+  padding-top: 0.75rem; /* Reduced from 1rem */
+  margin-top: 0.25rem; /* Reduced from 0.5rem */
   padding-left: 1rem;
 }
 .mobile-menu .contact-divider p {
@@ -252,7 +252,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 @media (max-width: 768px) {
   .desktop-nav { display: none; }
   .mobile-controls { display: flex; }
-  .mobile-menu { display: flex; }
+  .mobile-menu { /* Keep other styles for .mobile-menu here if any */ }
+  .mobile-menu.open { display: flex; }
   .header .logo-name,
   .header .logo-phone { display: none; }
 }
